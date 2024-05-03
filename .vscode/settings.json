@@ -59,6 +59,7 @@
   "files.associations": {
     "bitset": "cpp",
     "string_view": "cpp",
-    "regex": "cpp"
+    "regex": "cpp",
+    "iostream": "cpp"
   }
 }
