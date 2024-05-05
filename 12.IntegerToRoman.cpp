@@ -13,7 +13,7 @@ string intToRoman(int num) {
     result = units[num % 10] + result;
     result = dozens[(num % 100) / 10] + result;
     result = hundreds[(num % 1000) / 100] + result;
-    result = Thousands[num / 10000] + result;
+    result = Thousands[num / 1000] + result;
 
     return result;       
 }
