@@ -11,10 +11,8 @@ int maxArea(vector<int>& height) {
     while(left < right) {
         int verticalLine = min(height[left], height[right]);
         int vol = verticalLine * (right - left);
-        if (vol > maxVol) maxVol = vol;
-
-        if (height[left] < height[right]) left++;
-        else right--;
+        maxVol = max(vol, maxVol);
+        (height[left] < height[right] ? left++: right--);
     }
 
     result = maxVol;
