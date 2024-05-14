@@ -11,7 +11,8 @@ struct ListNode {
 };
 
 ListNode* mergeKLists(vector<ListNode*>& lists) {
-        
+    ListNode* result;
+    return result;
 }       
 
 int main () {
