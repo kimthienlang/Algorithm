@@ -5,13 +5,15 @@ using namespace std;
 int removeDuplicates(vector<int>& nums) {
     int res = 0;
     int lenNums = nums.size();
-    int temp = -101;
+    vector<int> newNums = {-101};
     for (int i = 0; i < lenNums; ++i) {
-        if (nums[i] != temp) {
-            temp = nums[i];
-            res++;
+        if (nums[i] != newNums.back()) {
+            newNums.push_back(nums[i]);
         }
     }
+    newNums.erase(newNums.begin());
+    res = newNums.size();
+    nums = newNums;
     return res;
 }
 
