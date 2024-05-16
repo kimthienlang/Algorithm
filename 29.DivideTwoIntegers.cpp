@@ -1,3 +1,4 @@
+//LOD: medium
 #include <bits/stdc++.h>
 
 using namespace std;
