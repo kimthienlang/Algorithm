@@ -1,4 +1,4 @@
-//LOD: Hard
+//LOD: Super Hard if 20ms
 
 #include <bits/stdc++.h>
 
