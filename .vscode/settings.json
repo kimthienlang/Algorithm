@@ -153,5 +153,7 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "smooth",
   "editor.cursorStyle": "line",
-  "editor.smoothScrolling": true
+  "editor.smoothScrolling": true,
+  "editor.fontFamily": "Courier Prime, Consolas, monospace",
+  "editor.fontSize": 16
 }
