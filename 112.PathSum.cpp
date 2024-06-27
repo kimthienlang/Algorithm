@@ -13,19 +13,11 @@ struct TreeNode {
 
 
 bool hasPathSum(TreeNode* root, int targetSum) {
-    if (root == nullptr) return false;
-    if (root->val == targetSum) {
-        return true;
-    } 
-    if (root->left != nullptr) {
-        root->left->val += root->val;
-        hasPathSum(root->left, targetSum);
-    }
-    if (root->right != nullptr) {
-        root->right->val += root->val;
-        hasPathSum(root->right, targetSum);
-    }
-    return false;
+    if(root == nullptr) return false;
+    if(root->left == nullptr && root->right == nullptr && targetSum == root->val) return true;
+    bool l = hasPathSum(root->left,  targetSum - root->val);
+    bool r = hasPathSum(root->right, targetSum - root->val);
+    return l | r;
 }
 
 int main() {
@@ -39,7 +31,7 @@ int main() {
     root->left->left->right   = new TreeNode(2);
     root->right->right->right = new TreeNode(1);
 
-    int target = 22;
+    int target = 4;
     bool res = hasPathSum(root, target);
     cout << "OUTPUT: " << res << endl;
 
