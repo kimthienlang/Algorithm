@@ -41,7 +41,7 @@ private:
 
 int main() {
     Solution sol;
-    int n = 8;
+    int n = 9;
     int solutions = sol.totalNQueens(n);
     cout << "Solutions : " << solutions << endl;
     return 0;
