@@ -22,10 +22,15 @@ string getDirections(TreeNode* root, int startValue, int destValue) {
     string s,d;
     path(root,startValue,s);
     path(root,destValue,d);
+    cout << s << endl;
+    cout << d << endl;
     while(!s.empty() && !d.empty() && s.back() == d.back()){
         s.pop_back();
         d.pop_back();
     }
+    cout << "----------------" << endl;
+    cout << s << endl;
+    cout << d << endl;
     return string(s.size(),'U') + string(rbegin(d),rend(d));
 }
 
